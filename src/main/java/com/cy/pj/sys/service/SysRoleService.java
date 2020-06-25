@@ -1,0 +1,20 @@
+package com.cy.pj.sys.service;
+
+import java.util.List;
+
+import com.cy.pj.common.vo.CheckBox;
+import com.cy.pj.common.vo.PageObject;
+import com.cy.pj.sys.entity.SysRole;
+import com.cy.pj.sys.entity.SysRoleMenu;
+
+public interface SysRoleService {
+	PageObject<SysRole> findPageObjects(
+			String name,Integer pageCurrent);
+
+	String doFindObjectById(Integer id);
+	int saveObject(SysRole entity,Integer[]menuIds);
+	int doDeleteObject(Integer id);
+	SysRoleMenu findObjectById(Integer id) ;
+	int updateObject(SysRole entity,Integer[] menuIds);
+	List<CheckBox> findObjects();
+}
