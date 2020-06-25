@@ -10,7 +10,7 @@ public class ShiroUtils {
 		return getUser().getUsername();
 	}
 	public static SysUser getUser() {
-		
+		//sgiro
 		return (SysUser)SecurityUtils.getSubject().getPrincipal();
 	}
 }
